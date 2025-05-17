@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enable Notifications</title>
+    <script>
+        function enableNotifications() {
+            Notification.requestPermission().then(permission => {
+                if (permission === "granted") {
+                    window.location.href = "wheel.html";
+                } else {
+                    alert("Please allow notifications to continue.");
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome!</h1>
+    <p>To play and win real prizes, please enable browser notifications.</p>
+    <button onclick="enableNotifications()">Enable Notifications</button>
+</body>
+</html>

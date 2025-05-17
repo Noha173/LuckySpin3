@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Account</title>
+</head>
+<body>
+    <h1>Your Balance</h1>
+    <div id="balance"></div>
+    <a href="payment.html">Withdraw</a>
+    <script>
+        const balance = localStorage.getItem("balance") || "$0";
+        document.getElementById("balance").innerText = "Current Balance: " + balance;
+    </script>
+</body>
+</html>
